@@ -13,3 +13,5 @@ Estudo_Django/__pycache__/wsgi.cpython-312.pyc
 core/migrations/__pycache__/__init__.cpython-312.pyc
 core/migrations/__pycache__/__init__.cpython-312.pyc
 .idea/workspace.xml
+/core/migrations/0001_initial.py
+/core/migrations/0002_evento_usuario_alter_evento_data_criacao_and_more.py

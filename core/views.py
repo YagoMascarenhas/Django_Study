@@ -1,17 +1,8 @@
 from django.shortcuts import render, HttpResponse
+from core.models import Evento
 
 # Create your views here.
-def hello(request, nome, idade):
-    return HttpResponse("<h1>Hello {}! You are {}</h1>".format(nome, idade))
 
-def sum(request, num1, num2):
-    return HttpResponse("<h1>The sum of {} and {} equals {}</h1>".format(num1, num2, num1 + num2))
-
-def subtraction(request, num1, num2):
-    return HttpResponse("<h1>The difference of {} and {} equals {}</h1>".format(num1, num2, num1 - num2))
-
-def multiply(request, num1, num2):
-    return HttpResponse("<h1>The product of {} and {} equals {}</h1>".format(num1, num2, num1 * num2))
-
-def divide(request, num1, num2):
-    return HttpResponse("<h1>The quotient of {} and {} equals {}</h1>".format(num1, num2, num1 / num2))
+def titulo_evento(request, titulo_evento):
+    evento = Evento.objects.get(titulo=titulo_evento)
+    return HttpResponse("<h1>O evento {} acontecerá em {}</h1>".format(evento.titulo, evento.data_evento))
