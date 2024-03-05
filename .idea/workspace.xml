@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a55d003-1942-4e58-814a-e5b75ac1738a" name="Changes" comment="Adicionando página de listagem">
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+    <list default="true" id="6a55d003-1942-4e58-814a-e5b75ac1738a" name="Changes" comment="Adicionando função e tela de autenticação">
+      <change afterPath="$PROJECT_DIR$/templates/evento.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estudo_Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Estudo_Django/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/model-header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/model-header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/agenda.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/agenda.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,25 +53,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.Estudo_Django.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "last_opened_file_path": "C:/Users/yago_/OneDrive/Documentos/GitHub/CertifierGenerator",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.Estudo_Django.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yago_/OneDrive/Documentos/GitHub/CertifierGenerator&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Estudo_Django" type="Python.DjangoServer" factoryName="Django server">
       <module name="Estudo_Django" />
@@ -119,7 +119,8 @@
       <workItem from="1709086563272" duration="62000" />
       <workItem from="1709243254781" duration="3495000" />
       <workItem from="1709404845395" duration="8945000" />
-      <workItem from="1709567337988" duration="11056000" />
+      <workItem from="1709567337988" duration="12254000" />
+      <workItem from="1709658659212" duration="5032000" />
     </task>
     <task id="LOCAL-00001" summary="Criando repositório, configurando e fazendo testes">
       <option name="closed" value="true" />
@@ -153,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709576678207</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adicionando função e tela de autenticação">
+      <option name="closed" value="true" />
+      <created>1709582513860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709582513860</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +184,7 @@
     <MESSAGE value="Criando tabela de eventos para trabalhar com a agenda" />
     <MESSAGE value="Adicionada rota para exibir nome e data do evento" />
     <MESSAGE value="Adicionando página de listagem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando página de listagem" />
+    <MESSAGE value="Adicionando função e tela de autenticação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando função e tela de autenticação" />
   </component>
 </project>
