@@ -8,7 +8,11 @@
 
     <ul style="font-size: 18px">
         {% for evento in eventos %}
-            <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+            {% if evento.local is None %}
+                <li> {{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+            {% else %}
+                <li>{{ evento.titulo }} ({{ evento.local }})- {{ evento.get_data_evento }}</li>
+            {% endif %}
         {% endfor %}
     </ul>
 {% endblock %}
