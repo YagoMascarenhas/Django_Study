@@ -38,9 +38,8 @@ def submit_login(request):
 @login_required(login_url="/login/")
 def lista_eventos(request):
     usuario = request.user
-    data_atual = datetime.now() - timedelta(hours=1)
     # __gt apresenta eventos após uma data, __lt apresenta eventos antes de uma data
-    evento = Evento.objects.filter(usuario=usuario, data_evento__gt=data_atual)
+    evento = Evento.objects.filter(usuario=usuario, data_evento__gt=datetime.now())
     dados = {"eventos": evento}
     return render(request, "agenda.html", dados)
 
@@ -48,9 +47,12 @@ def lista_eventos(request):
 @login_required(login_url="/login/")
 def evento(request):
     id_evento = request.GET.get("id")
+    usuario = request.user
     dados = {}
     if id_evento:
         dados["evento"] = Evento.objects.get(id=id_evento)
+    if usuario != dados["evento"].usuario:
+        raise Http404
     return render(request, "evento.html", dados)
 
 
@@ -76,6 +78,8 @@ def submit_evento(request):
             #                                                   data_evento=data_evento,
             #                                                   local=local,
             #                                                   descricao=descricao)
+            else:
+                raise Http404
         else:
             Evento.objects.create(titulo=titulo,
                                   data_evento=data_evento,
@@ -97,6 +101,15 @@ def delete_evento(request, id_evento):
     else:
         raise Http404()
     return redirect("/")
+
+
+@login_required(login_url="/login/")
+def historico(request):
+    usuario = request.user
+    # __gt apresenta eventos após uma data, __lt apresenta eventos antes de uma data
+    evento = Evento.objects.filter(usuario=usuario, data_evento__lt=datetime.now())
+    dados = {"eventos": evento}
+    return render(request, "historico.html", dados)
 
 
 def json_lista_evento(request, id_usuario):

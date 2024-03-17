@@ -1,0 +1,22 @@
+{% extends "model-page.html" %}
+{% block content %}
+    <h2>Eventos Passados</h2>
+    
+    <a href="/">
+        <button type="button">Voltar</button>
+    </a>
+    
+    <ul style="font-size:18px">
+        {% for evento in eventos %}
+            {% if evento.local is None %}
+                <li>
+                    {{ evento.titulo }} - {{ evento.get_data_evento }}
+                </li>
+            {% else %}
+                <li>
+                    {{ evento.titulo }} ({{ evento.local }}) - {{ evento.get_data_evento }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

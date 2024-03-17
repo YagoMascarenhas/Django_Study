@@ -5,11 +5,15 @@
     <a href="evento/">
         <button type="button">Novo Evento</button>
     </a>
+    
+    <a href="historico/">
+        <button type="button">Histórico de Eventos</button>
+    </a>
 
     <ul style="font-size: 18px">
         {% for evento in eventos %}
-            <div style={% if evento.get_evento_atrasado %}
-                            "color:red"
+            <div style={% if evento.get_evento_proximo %}
+                            "color: darkorange"
                         {% endif %}>
                 {% if evento.local is None %}
                     <li>
@@ -19,7 +23,7 @@
                     </li>
                 {% else %}
                     <li>
-                        {{ evento.titulo }} ({{ evento.local }})- {{ evento.get_data_evento }}
+                        {{ evento.titulo }} ({{ evento.local }}) - {{ evento.get_data_evento }}
                         ( <a href="evento/?id={{ evento.id }}">Editar</a> /
                         <a href="evento/delete/{{ evento.id }}">Excluir</a> )
                     </li>

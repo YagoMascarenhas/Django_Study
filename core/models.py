@@ -30,3 +30,11 @@ class Evento(models.Model):
             return True
         else:
             return False
+
+    def get_evento_proximo(self):
+        data_inicio_maximo = datetime.now() + timedelta(hours=1)
+        # Verifica se a data do evento está entre agora e uma hora no futuro
+        if datetime.now() <= self.data_evento <= data_inicio_maximo:
+            return True
+        else:
+            return False
